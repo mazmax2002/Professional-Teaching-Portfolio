@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Thidarat Jaidee | Teaching Portfolio</title>
+    
+    <!-- Google Fonts: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a', // Blue 900
+                        secondary: '#d97706', // Amber 600
+                        accent: '#f3f4f6', // Gray 100
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { font-family: 'Kanit', sans-serif; overflow-x: hidden; }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; sm:width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #1e3a8a; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #172554; }
+        
+        /* Ensure images inside aspect ratios don't stretch */
+        .img-cover { object-fit: cover; width: 100%; height: 100%; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-200 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 sm:h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-xl sm:text-2xl font-bold text-primary flex items-center gap-2">
+                        <i class="fa-solid fa-code text-secondary"></i>
+                        <span>Thidarat<span class="text-secondary">.</span></span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-primary font-medium transition-colors">หน้าแรก</a>
+                    <a href="#profile" class="text-slate-600 hover:text-primary font-medium transition-colors">ข้อมูลส่วนตัว</a>
+                    <a href="#experience" class="text-slate-600 hover:text-primary font-medium transition-colors">ประสบการณ์</a>
+                    <a href="#portfolio" class="text-slate-600 hover:text-primary font-medium transition-colors">ผลงาน & กิจกรรม</a>
+                    <a href="#certificates" class="text-slate-600 hover:text-primary font-medium transition-colors">เกียรติบัตร</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none p-2 rounded-md">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-lg absolute w-full max-h-screen overflow-y-auto">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 mobile-link">หน้าแรก</a>
+                <a href="#profile" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 mobile-link">ข้อมูลส่วนตัว</a>
+                <a href="#experience" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 mobile-link">ประสบการณ์</a>
+                <a href="#portfolio" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 mobile-link">ผลงาน & กิจกรรม</a>
+                <a href="#certificates" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 mobile-link">เกียรติบัตร</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-12 sm:pt-32 sm:pb-20 lg:pt-48 lg:pb-32 overflow-hidden relative">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mr-10 -mt-10 sm:-mr-20 sm:-mt-20 w-64 h-64 sm:w-96 sm:h-96 rounded-full bg-blue-100 opacity-50 blur-3xl z-0"></div>
+        <div class="absolute bottom-0 left-0 -ml-10 -mb-10 sm:-ml-20 sm:-mb-20 w-48 h-48 sm:w-80 sm:h-80 rounded-full bg-amber-100 opacity-50 blur-3xl z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+                <div class="order-2 lg:order-1 text-center lg:text-left space-y-5 sm:space-y-6">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-primary font-medium text-xs sm:text-sm mb-2 sm:mb-4">
+                        <i class="fa-solid fa-laptop-code text-secondary mr-2"></i> แฟ้มสะสมผลงานวิชาชีพครู
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+                        สวัสดีค่ะ, ฉัน <br>
+                        <span class="text-primary">ธิดารัตน์ ใจดี</span> <br>
+                        ครูคอมพิวเตอร์ & โค้ดดิ้ง
+                    </h1>
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 px-4 sm:px-0">
+                        "มุ่งพัฒนาทักษะเด็กผ่าน Robotics และ Coding โดยใช้การเรียนรู้แบบลงมือปฏิบัติ (Hands-on Learning) และเทคโนโลยีดิจิทัล"
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start pt-2 sm:pt-4">
+                        <a href="#profile" class="w-full sm:w-auto px-6 sm:px-8 py-3 bg-primary text-white rounded-xl font-medium hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2">
+                            ข้อมูลส่วนตัว <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#portfolio" class="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-primary border border-gray-200 rounded-xl font-medium hover:border-primary hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                            ดูผลงาน <i class="fa-regular fa-star"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 flex justify-center px-4 sm:px-0">
+                    <div class="relative w-full max-w-[300px] sm:max-w-md">
+                        <!-- Background shape -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary to-blue-400 rounded-3xl transform rotate-3 scale-105 opacity-20"></div>
+                        <!-- Profile Image Placeholder -->
+                        <img src="2.JPG" alt="Profile Portrait" class="relative rounded-3xl shadow-xl sm:shadow-2xl object-cover w-full aspect-[4/5] border-4 border-white">
+                        
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-white p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl flex items-center gap-3 sm:gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-blue-100 text-blue-600 p-2 sm:p-3 rounded-full">
+                                <i class="fa-solid fa-code text-xl sm:text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs sm:text-sm text-gray-500 font-medium">สาขาวิชา</p>
+                                <p class="text-sm sm:text-base text-gray-900 font-bold leading-tight">เทคโนโลยีดิจิทัล<br class="sm:hidden">เพื่อการศึกษา</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile & Education Section -->
+    <section id="profile" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 sm:mb-4">ประวัติส่วนตัว & การศึกษา <span class="block sm:inline text-primary">Profile & Education</span></h2>
+                <div class="w-16 sm:w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Personal Info Card -->
+                <div class="lg:col-span-1 bg-slate-50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6 border-b pb-3 sm:pb-4 border-gray-200">ข้อมูลส่วนตัว</h3>
+                    <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                        <li><span class="font-medium text-slate-500">ชื่อ-นามสกุล:</span> <br>นางสาวธิดารัตน์ ใจดี (โม)</li>
+                        <li><span class="font-medium text-slate-500">เกิดวันที่:</span> <br>29 พฤศจิกายน 2545 (อายุ 23 ปี)</li>
+                        <li><span class="font-medium text-slate-500">สัญชาติ/เชื้อชาติ/ศาสนา:</span> <br>ไทย / ไทย / พุทธ</li>
+                        <li><span class="font-medium text-slate-500">ที่อยู่:</span> <br>VTN แมนชั่น 149/2 ถนนอนามัยงามเจริญ แขวงท่าข้าม เขตบางขุนเทียน กรุงเทพ 10150</li>
+                    </ul>
+                    
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mt-6 sm:mt-8 mb-4 sm:mb-6 border-b pb-3 sm:pb-4 border-gray-200">ช่องทางการติดต่อ</h3>
+                    <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base">
+                        <li class="flex items-center gap-3 break-all"><i class="fa-solid fa-envelope text-primary w-5 text-center"></i> thidarut6565@gmail.com</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-primary w-5 text-center"></i> 064-795-8647</li>
+                        <li class="flex items-center gap-3"><i class="fa-brands fa-facebook text-primary w-5 text-center"></i> Thidarat Jaidee</li>
+                        <li class="flex items-center gap-3"><i class="fa-brands fa-instagram text-primary w-5 text-center"></i> tthidxrazz_</li>
+                    </ul>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="lg:col-span-2 bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-gray-100 shadow-sm">
+                    <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-6 border-b pb-4 border-gray-200">ประวัติการศึกษา</h3>
+                    
+                    <div class="relative border-l-2 border-primary ml-3 sm:ml-4 space-y-6 sm:space-y-8">
+                        <!-- Primary -->
+                        <div class="relative pl-6 sm:pl-8">
+                            <div class="absolute -left-[9px] sm:-left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-primary"></div>
+                            <h4 class="text-base sm:text-lg font-bold text-slate-800">ระดับประถมศึกษา</h4>
+                            <p class="text-sm sm:text-base text-slate-600">โรงเรียนอนุบาลชุมตาบง จังหวัดนครสวรรค์</p>
+                        </div>
+                        
+                        <!-- Middle School -->
+                        <div class="relative pl-6 sm:pl-8">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-primary"></div>
+                            <h4 class="text-base sm:text-lg font-bold text-slate-800">ระดับมัธยมศึกษาตอนต้น</h4>
+                            <p class="text-sm sm:text-base text-slate-600">โรงเรียนลาสักวิทยา จังหวัดอุทัยธานี</p>
+                        </div>
+                        
+                        <!-- High School -->
+                        <div class="relative pl-6 sm:pl-8">
+                            <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-white border-2 border-primary"></div>
+                            <h4 class="text-base sm:text-lg font-bold text-slate-800">ระดับมัธยมศึกษาตอนปลาย</h4>
+                            <p class="text-sm sm:text-base text-slate-600">โรงเรียนห้วยน้ำหอมวิทยาคาร (แผนการเรียน ศิลป์-ทั่วไป) จังหวัดนครสวรรค์</p>
+                        </div>
+                        
+                        <!-- University -->
+                        <div class="relative pl-6 sm:pl-8">
+                            <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-primary border-2 border-white shadow-sm"></div>
+                            <div class="bg-blue-50 p-3 sm:p-4 rounded-xl border border-blue-100 mt-2">
+                                <span class="bg-secondary text-white text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold inline-block mb-1">เกียรตินิยมอันดับ 1 (3.86)</span>
+                                <h4 class="text-lg sm:text-xl font-bold text-primary mt-1 sm:mt-2">ระดับอุดมศึกษา (ปริญญาตรี)</h4>
+                                <p class="text-sm sm:text-base text-slate-700 font-medium mt-1">หลักสูตรครุศาสตรบัณฑิต สาขาวิชาเทคโนโลยีดิจิทัลเพื่อการศึกษา</p>
+                                <p class="text-xs sm:text-sm text-slate-600 mt-1">มหาวิทยาลัยราชภัฏนครสวรรค์</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="mt-8 sm:mt-12 bg-slate-900 text-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl overflow-hidden">
+                <h3 class="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center"><i class="fa-solid fa-bolt text-secondary mr-2"></i> ทักษะและความสามารถ (Skills)</h3>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Computer Skills -->
+                    <div>
+                        <h4 class="text-lg sm:text-xl font-bold text-blue-300 mb-3 sm:mb-4 border-b border-slate-700 pb-2">การใช้โปรแกรมคอมพิวเตอร์</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm sm:text-base"><span class="font-medium">Microsoft Word / PowerPoint</span><span class="text-secondary text-xs sm:text-sm">สูง</span></div>
+                                <div class="w-full bg-slate-700 rounded-full h-1.5 sm:h-2"><div class="bg-secondary h-1.5 sm:h-2 rounded-full" style="width: 85%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm sm:text-base"><span class="font-medium">Microsoft Excel</span><span class="text-blue-300 text-xs sm:text-sm">ปานกลาง</span></div>
+                                <div class="w-full bg-slate-700 rounded-full h-1.5 sm:h-2"><div class="bg-blue-400 h-1.5 sm:h-2 rounded-full" style="width: 60%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1 text-sm sm:text-base"><span class="font-medium">Canva</span><span class="text-secondary text-xs sm:text-sm">สูงมาก</span></div>
+                                <div class="w-full bg-slate-700 rounded-full h-1.5 sm:h-2"><div class="bg-secondary h-1.5 sm:h-2 rounded-full" style="width: 95%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Programming Skills -->
+                    <div>
+                        <h4 class="text-lg sm:text-xl font-bold text-blue-300 mb-3 sm:mb-4 border-b border-slate-700 pb-2">ภาษาในการเขียนโปรแกรม</h4>
+                        <ul class="space-y-3 sm:space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <span class="font-bold text-white text-sm sm:text-base">ภาษา C</span>
+                                    <p class="text-slate-400 text-xs sm:text-sm mt-0.5">เข้าใจโครงสร้างโปรแกรมเบื้องต้น อธิบายแนวคิดให้ผู้เรียนได้</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <span class="font-bold text-white text-sm sm:text-base">ภาษา Python</span>
+                                    <p class="text-slate-400 text-xs sm:text-sm mt-0.5">เขียนโปรแกรมพื้นฐาน ใช้สอนการคิดเชิงตรรกะและการแก้ปัญหา</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <span class="font-bold text-white text-sm sm:text-base">HTML / CSS</span>
+                                    <p class="text-slate-400 text-xs sm:text-sm mt-0.5">ออกแบบเว็บไซต์อย่างง่าย สอนพื้นฐานการสร้างเว็บ</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-green-400 mt-1 flex-shrink-0"></i>
+                                <div>
+                                    <span class="font-bold text-white text-sm sm:text-base">PHP / MySQL</span>
+                                    <p class="text-slate-400 text-xs sm:text-sm mt-0.5">เข้าใจระบบเว็บไซต์และฐานข้อมูลระดับพื้นฐาน</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Internship) -->
+    <section id="experience" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 sm:mb-4">การฝึกประสบการณ์วิชาชีพครู <span class="block sm:inline text-primary">School Internship</span></h2>
+                <div class="w-16 sm:w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Responsive Grid: 1 col (mobile), 2 cols (tablet), 4 cols (desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6">
+                
+                <!-- Box 1: Observational Practice -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col group">
+                    <div class="aspect-video w-full relative cursor-pointer overflow-hidden bg-slate-200" onclick="openGallery(internship1Images)">
+                        <img src="8.png" alt="สังเกตการสอน" class="img-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-2xl sm:text-3xl mb-1 sm:mb-2"></i>
+                            <span class="font-bold text-xs sm:text-sm">คลิกดูรูปภาพ (5 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 text-primary rounded-full flex items-center justify-center font-bold mb-3 sm:mb-4 shadow-sm text-sm sm:text-base">1</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-1 sm:mb-2">สังเกตการสอน</h3>
+                        <p class="text-xs sm:text-sm font-medium text-secondary mb-2"><i class="fa-regular fa-clock"></i> ระยะเวลา 3 สัปดาห์</p>
+                        <p class="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4"><strong>โรงเรียนห้วยน้ำหอมวิทยาคาร</strong> อ.ชุมตาบง จ.นครสวรรค์</p>
+                        <div class="bg-slate-50 p-2 sm:p-3 rounded-lg text-xs sm:text-sm text-slate-700 mt-auto border border-slate-100">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>วิชาวิทยาการคำนวณ ม.4</li>
+                                <li>วิชาออกแบบและเทคโนโลยี ม.1</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 2: Teacher Assistant -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col group">
+                    <div class="aspect-video w-full relative cursor-pointer overflow-hidden bg-slate-200" onclick="openGallery(internship2Images)">
+                        <img src="13.jpg" alt="ผู้ช่วยครู" class="img-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-2xl sm:text-3xl mb-1 sm:mb-2"></i>
+                            <span class="font-bold text-xs sm:text-sm">คลิกดูรูปภาพ (6 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 text-primary rounded-full flex items-center justify-center font-bold mb-3 sm:mb-4 shadow-sm text-sm sm:text-base">2</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-1 sm:mb-2">ผู้ช่วยครู</h3>
+                        <p class="text-xs sm:text-sm font-medium text-secondary mb-2"><i class="fa-regular fa-clock"></i> ระยะเวลา 3 สัปดาห์</p>
+                        <p class="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4"><strong>โรงเรียนวัดวรนาถบรรพต (ท.4)</strong> อ.เมือง จ.นครสวรรค์</p>
+                        <div class="bg-slate-50 p-2 sm:p-3 rounded-lg text-xs sm:text-sm text-slate-700 mt-auto border border-slate-100">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>วิทยาการคำนวณ ป.4-ป.6</li>
+                                <li>วิชาลูกเสือ-เนตรนารี</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 3: Trial Teaching -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col group">
+                    <div class="aspect-video w-full relative cursor-pointer overflow-hidden bg-slate-200" onclick="openGallery(internship3Images)">
+                        <img src="38.jpg" alt="ทดลองสอน" class="img-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-2xl sm:text-3xl mb-1 sm:mb-2"></i>
+                            <span class="font-bold text-xs sm:text-sm">คลิกดูรูปภาพ (5 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 text-primary rounded-full flex items-center justify-center font-bold mb-3 sm:mb-4 shadow-sm text-sm sm:text-base">3</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-800 mb-1 sm:mb-2">ทดลองสอน</h3>
+                        <p class="text-xs sm:text-sm font-medium text-secondary mb-2"><i class="fa-regular fa-clock"></i> ระยะเวลา 3 สัปดาห์</p>
+                        <p class="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4"><strong>โรงเรียนห้วยน้ำหอมวิทยาคาร</strong> อ.ชุมตาบง จ.นครสวรรค์</p>
+                        <div class="bg-slate-50 p-2 sm:p-3 rounded-lg text-xs sm:text-sm text-slate-700 mt-auto border border-slate-100">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>วิทยาการคำนวณ ม.1</li>
+                                <li>วิชาลูกเสือ-เนตรนารี</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 4: Full Internship -->
+                <div class="bg-white rounded-2xl border-2 border-primary shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-[10px] sm:text-xs font-bold px-2 sm:px-3 py-1 rounded-bl-lg z-10">ล่าสุด</div>
+                    <div class="aspect-video w-full relative cursor-pointer overflow-hidden bg-slate-200" onclick="openGallery(internship4Images)">
+                        <img src="19.jpg" alt="ฝึกประสบการณ์วิชาชีพ" class="img-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-2xl sm:text-3xl mb-1 sm:mb-2"></i>
+                            <span class="font-bold text-xs sm:text-sm">คลิกดูรูปภาพ (6 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-5 sm:p-6 flex-1 flex flex-col">
+                        <div class="w-8 h-8 sm:w-10 sm:h-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-3 sm:mb-4 shadow-md text-sm sm:text-base">4</div>
+                        <h3 class="text-lg sm:text-xl font-bold text-primary mb-1 sm:mb-2">ฝึกปฏิบัติการสอน</h3>
+                        <p class="text-xs sm:text-sm font-bold text-secondary mb-2"><i class="fa-regular fa-clock"></i> ระยะเวลา 1 ภาคเรียน</p>
+                        <p class="text-slate-600 text-xs sm:text-sm mb-3 sm:mb-4"><strong>โรงเรียนห้วยน้ำหอมวิทยาคาร</strong> อ.ชุมตาบง จ.นครสวรรค์</p>
+                        <div class="bg-blue-50 p-2 sm:p-3 rounded-lg text-xs sm:text-sm text-blue-900 mt-auto border border-blue-100">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>วิทยาการคำนวณ ม.1</li>
+                                <li>วิชาลูกเสือ-เนตรนารี</li>
+                                <li>ชุมนุม สร้างเว็บ HTML/CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio & Activities Section -->
+    <section id="portfolio" class="py-16 sm:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 sm:mb-4">ผลงานและกิจกรรม <span class="block sm:inline text-primary">Workpiece & Activities</span></h2>
+                <div class="w-16 sm:w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto px-4 sm:px-0">ผลงานที่เกี่ยวข้องกับการสอนหุ่นยนต์และโค้ดดิ้ง</p>
+            </div>
+
+            <!-- Masterpiece 1: Innovation Presentation -->
+            <div class="bg-slate-900 rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl text-white mb-10 sm:mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                        <span class="bg-white/20 text-white border border-white/30 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full w-max mb-3 sm:mb-4"><i class="fa-solid fa-award mr-1"></i> นวัตกรรม</span>
+                        <h3 class="text-xl sm:text-2xl font-bold mb-2 sm:mb-4 leading-snug">นำเสนอนวัตกรรมพลศึกษาและกีฬา ครั้งที่ 7</h3>
+                        <p class="text-slate-300 mb-3 sm:mb-4 text-xs sm:text-sm"><i class="fa-solid fa-location-dot mr-1"></i> คณะพลศึกษา มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+                        <p class="text-slate-300 mb-4 sm:mb-6 leading-relaxed bg-slate-800 p-3 sm:p-4 rounded-xl border border-slate-700 text-sm sm:text-base">
+                            <strong>ชื่อผลงาน:</strong> การพัฒนาอุปกรณ์ฝึกซ้อมความแม่นยำในการตีลูกเทเบิลเทนนิสด้วยระบบอัตโนมัติ สำหรับนักเรียนที่เรียนในรายวิชาพลศึกษา พร้อมการนับจำนวนลูกและแสดงผลแบบเรียลไทม์
+                        </p>
+                        <a href="https://drive.google.com/file/d/1YHdV327AClU5_XC_Ydffw2KGGXP2Zei5/view?usp=sharing" class="inline-flex w-full sm:w-max items-center justify-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg text-sm font-medium transition-colors">
+                            <i class="fa-solid fa-download"></i> ดาวน์โหลดรายงานนวัตกรรม (PDF)
+                        </a>
+                    </div>
+                    <div class="aspect-[4/3] lg:aspect-auto w-full h-full relative order-1 lg:order-2 group cursor-pointer" onclick="openGallery(innovationImages)">
+                        <img src="4.jpg" alt="นำเสนอนวัตกรรม" class="img-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-3xl sm:text-4xl mb-2"></i>
+                            <span class="font-bold text-sm">คลิกดูรูปภาพ (4 รูป)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 1: Robotics Workshop 1 -->
+            <div class="bg-slate-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-8 sm:mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="aspect-video lg:aspect-auto h-48 sm:h-64 lg:h-full relative group cursor-pointer" onclick="openGallery(robotics1Images)">
+                        <img src="24.jpg" alt="ผู้ช่วยวิทยากรหุ่นยนต์" class="img-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-3xl sm:text-4xl mb-2"></i>
+                            <span class="font-bold text-sm">คลิกดูรูปภาพกิจกรรม (5 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                        <span class="bg-blue-100 text-blue-700 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full w-max mb-3 sm:mb-4">วิทยากรอบรม</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">เข้าร่วมอบรมวิทยาการคอมพิวเตอร์ ครั้งที่ 1 (หุ่นยนต์อัตโนมัติ)</h3>
+                        <p class="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                            ทำหน้าที่เป็นวิทยากรและผู้จัดกิจกรรมในค่ายวิทยาการคอมพิวเตอร์ โรงเรียนห้วยน้ำหอมวิทยาคาร ให้ความรู้เบื้องต้นเกี่ยวกับการทำงานของหุ่นยนต์อัตโนมัติ และการเขียนโปรแกรมควบคุมพื้นฐาน
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2: Microbit Competition -->
+            <div class="bg-slate-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-8 sm:mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                        <span class="bg-secondary/20 text-secondary border border-secondary/30 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full w-max mb-3 sm:mb-4">กรรมการและวิทยากร</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">แข่งขันหุ่นยนต์วิ่งตามเส้น Microbit</h3>
+                        <p class="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                            เป็นวิทยากรให้คำแนะนำและเป็นกรรมการตัดสินในการแข่งขันหุ่นยนต์วิ่งตามเส้นด้วยบอร์ด Microbit เนื่องในสัปดาห์วิทยาศาสตร์ของโรงเรียน ส่งเสริมทักษะการแก้ปัญหาและการคิดเชิงตรรกะของนักเรียน
+                        </p>
+                    </div>
+                    <div class="aspect-video lg:aspect-auto h-48 sm:h-64 lg:h-full relative order-1 lg:order-2 group cursor-pointer" onclick="openGallery(microbitImages)">
+                        <img src="28.jpg" alt="เป็นวิทยากร การแข่งขันหุ่นยนต์ Microbit" class="img-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-secondary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-3xl sm:text-4xl mb-2"></i>
+                            <span class="font-bold text-sm">คลิกดูรูปภาพกิจกรรม (4 รูป)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3: Robotics Workshop 2 -->
+            <div class="bg-slate-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-8 sm:mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="aspect-video lg:aspect-auto h-48 sm:h-64 lg:h-full relative group cursor-pointer" onclick="openGallery(robotics2Images)">
+                        <img src="34.jpg" alt="หุ่นยนต์เตะจุดโทษ" class="img-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-teal-600/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-3xl sm:text-4xl mb-2"></i>
+                            <span class="font-bold text-sm">คลิกดูรูปภาพกิจกรรม (4 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                        <span class="bg-teal-100 text-teal-700 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full w-max mb-3 sm:mb-4">ค่ายอบรม</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">เข้าร่วมอบรมค่ายวิทยาการคอมพิวเตอร์ ครั้งที่ 2 (หุ่นยนต์เตะจุดโทษ)</h3>
+                        <p class="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                            อบรมเชิงปฏิบัติการการประกอบและเขียนโปรแกรมควบคุมหุ่นยนต์เตะจุดโทษ ให้นักเรียนได้เรียนรู้กลไกการเคลื่อนที่และการใช้เซนเซอร์เบื้องต้นผ่านกิจกรรมที่สนุกสนาน
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 4: Web Development (Certificate System) -->
+            <div class="bg-slate-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-8 sm:mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2 lg:order-1">
+                        <span class="bg-indigo-100 text-indigo-700 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full w-max mb-3 sm:mb-4">ผู้พัฒนาเว็บ / Web Developer</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">พัฒนาระบบเว็บไซต์ประกาศผลและดาวน์โหลดเกียรติบัตร</h3>
+                        <p class="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                            สัปดาห์วิทยาศาตร์ ทําเว็บไซต์ประกาศผลการแข่งขันรายการต่างๆ และทําเว็บไซต์ดาวโหลดเกียรติบัตร
+                        </p>
+                        <a href="https://sites.google.com/namhom.ac.th/science-tech/%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A8%E0%B8%9C%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%82%E0%B8%87%E0%B8%82%E0%B8%99?fbclid=IwY2xjawUNO9FwZG9mBWV4dG4DYWVtAjExAHNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6TbrUlzUDpoUj6e1QZc9uOx3sHiyp_O5c4dg41UucrxsIkrP6_PsE9upX6WQ_aem_VsYX3M5rWdPJlujrLuIB5Q" class="inline-flex w-full sm:w-max items-center justify-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-600 border border-indigo-200 hover:bg-indigo-600 hover:text-white rounded-lg text-sm font-medium transition-colors">
+                            <i class="fa-solid fa-globe"></i> เข้าชมเว็บไซต์ต้นแบบ (Demo)
+                        </a>
+                    </div>
+                    <div class="aspect-video lg:aspect-auto h-48 sm:h-64 lg:h-full relative order-1 lg:order-2 group cursor-pointer" onclick="openGallery(webDevImages)">
+                        <img src="44.png" alt="ระบบเว็บดาวน์โหลดเกียรติบัตร" class="img-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-indigo-600/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-3xl sm:text-4xl mb-2"></i>
+                            <span class="font-bold text-sm">คลิกดูรูปภาพระบบ (4 รูป)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 5: PM 2.5 IoT Project -->
+            <div class="bg-slate-50 rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 shadow-sm mb-8 sm:mb-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <div class="aspect-video lg:aspect-auto h-48 sm:h-64 lg:h-full relative group cursor-pointer" onclick="openGallery(pm25Images)">
+                        <img src="57.jpg" alt="โครงงานวัดค่าฝุ่น PM 2.5" class="img-cover absolute inset-0">
+                        <div class="absolute inset-0 bg-teal-800/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-white">
+                            <i class="fa-solid fa-images text-3xl sm:text-4xl mb-2"></i>
+                            <span class="font-bold text-sm">คลิกดูรูปภาพกิจกรรม (4 รูป)</span>
+                        </div>
+                    </div>
+                    <div class="p-6 sm:p-8 lg:p-12 flex flex-col justify-center">
+                        <span class="bg-emerald-100 text-emerald-700 text-[10px] sm:text-xs font-bold px-3 py-1 rounded-full w-max mb-3 sm:mb-4">โครงงาน IoT / STEM</span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-3 sm:mb-4">โปรเจกต์เครื่องวัดค่าฝุ่น PM 2.5 ในห้องเรียน (IoT)</h3>
+                        <p class="text-slate-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                            พัฒนานวัตกรรมเครื่องวัดค่าฝุ่นละออง PM 2.5 ภายในห้องเรียนด้วยบอร์ดไมโครคอนโทรลเลอร์ (เช่น NodeMCU/ESP32) ร่วมกับเซนเซอร์ โดยให้นักเรียนมีส่วนร่วมในการประกอบวงจร เขียนโปรแกรมแสดงผล และส่งข้อมูลแจ้งเตือนผ่านสมาร์ทโฟนแบบเรียลไทม์ ส่งเสริมทักษะเทคโนโลยี IoT และสร้างความตระหนักรู้ด้านสุขภาพ
+                        </p>
+                        <a href="https://drive.google.com/file/d/1vKV9vbtxZ9bUhQ1Pf5jNhC2XbKCbKsUu/view?usp=sharing" class="inline-flex w-full sm:w-max items-center justify-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-600 border border-emerald-200 hover:bg-emerald-600 hover:text-white rounded-lg text-sm font-medium transition-colors">
+                            <i class="fa-solid fa-microchip"></i> สรุปโครงงานการทดลอง (.pdf)
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Teaching Activity Section -->
+            <div class="mt-16 sm:mt-20 pt-12 sm:pt-16 border-t border-gray-200">
+                <div class="text-center mb-8 sm:mb-10">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 mb-2">กิจกรรมการสอน <span class="block sm:inline text-primary">Teaching Activities</span></h2>
+                    <p class="text-sm sm:text-base text-slate-600">ตัวอย่างการจัดการเรียนการสอนในชั้นเรียนจริง</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-5 sm:p-6 md:p-8 border border-blue-100 flex flex-col md:flex-row gap-6 sm:gap-8 items-center">
+                    <div class="w-full md:w-1/3 aspect-[4/3] sm:aspect-video md:aspect-square lg:aspect-video relative group cursor-pointer rounded-xl overflow-hidden shadow-md" onclick="openGallery(teachingImages)">
+                        <img src="19.jpg" alt="บรรยากาศการสอน" class="img-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-images text-white text-3xl"></i>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-2/3 text-center md:text-left">
+                        <h4 class="text-lg sm:text-xl font-bold text-primary mb-2 sm:mb-3">สอนรายวิชาวิทยาการคำนวณ ระดับมัธยมศึกษาตอนต้น</h4>
+                        <p class="text-sm sm:text-base text-slate-700 mb-4 sm:mb-6">เรื่อง การเขียนโปรแกรมเบื้องต้น โดยประยุกต์ใช้เว็บไซต์ <span class="font-bold">Codekit</span> เพื่อให้นักเรียนเข้าใจโครงสร้างการเขียนโปรแกรมผ่าน Text คำสั่งที่เข้าใจง่ายและสนุกสนาน</p>
+                        
+                        <a href="https://drive.google.com/file/d/1uGFZAXOKHm8AnIiAidKp7Dr85ccZmjAZ/view?usp=sharing" class="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-2.5 bg-rose-50 text-rose-600 border border-rose-200 hover:bg-rose-500 hover:text-white rounded-lg text-sm font-medium transition-colors">
+                            <i class="fa-regular fa-file-pdf"></i> ดูแผนการสอนฉบับเต็ม (.pdf)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-16 sm:py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 sm:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-2 sm:mb-4">เกียรติบัตร <span class="block sm:inline text-primary">Certificates</span></h2>
+                <div class="w-16 sm:w-20 h-1 bg-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Responsive grid for certificates -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-6">
+                <!-- Cert 1 -->
+                <div class="bg-white rounded-xl p-3 sm:p-4 border border-gray-200 shadow-sm hover:shadow-lg transition-all group cursor-pointer" onclick="openLightbox('1.png', 'ผ่านการทดสอบความรู้ความสามารถด้านคอมพิวเตอร์ ตามโครงการประกันคุณภาพคอมพิวเตอร์ มหาวิทยาลัยราชภัฏภาคเหนือ')">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-3 sm:mb-4">
+                        <img src="1.png" alt="เกียรติบัตร 1" class="img-cover">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="bg-white p-3 rounded-full text-primary shadow-lg transform scale-90 group-hover:scale-100 transition-transform"><i class="fa-solid fa-search"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 font-medium text-center line-clamp-2 px-1">ผ่านการทดสอบความรู้ด้านคอมพิวเตอร์ โครงการประกันคุณภาพคอมพิวเตอร์</p>
+                </div>
+                
+
+                <!-- Cert 3 -->
+                <div class="bg-white rounded-xl p-3 sm:p-4 border border-gray-200 shadow-sm hover:shadow-lg transition-all group cursor-pointer" onclick="openLightbox('47.jpg', 'วิทยากรอบรมค่ายวิทยาการคอมพิวเตอร์ ครั้งที่ 2 ณ โรงเรียนห้วยน้ำหอมวิทยาคาร')">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-3 sm:mb-4">
+                        <img src="47.jpg" alt="เกียรติบัตร 3" class="img-cover">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="bg-white p-3 rounded-full text-primary shadow-lg transform scale-90 group-hover:scale-100 transition-transform"><i class="fa-solid fa-search"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 font-medium text-center line-clamp-2 px-1">วิทยากรอบรมกิจกรรมค่ายวิทยาการคอมพิวเตอร์ โรงเรียนห้วยน้ำหอมวิทยาคาร</p>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="bg-white rounded-xl p-3 sm:p-4 border border-gray-200 shadow-sm hover:shadow-lg transition-all group cursor-pointer" onclick="openLightbox('50.jpg', 'เข้าร่วมการพัฒนาโรงเรียนคุณธรรม 4+6 Model')">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-3 sm:mb-4">
+                        <img src="50.jpg" alt="เกียรติบัตร 4" class="img-cover">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="bg-white p-3 rounded-full text-primary shadow-lg transform scale-90 group-hover:scale-100 transition-transform"><i class="fa-solid fa-search"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 font-medium text-center line-clamp-2 px-1">เข้าร่วมโครงการพัฒนาโรงเรียนคุณธรรมตามแนวทาง "4+6 Model"</p>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="bg-white rounded-xl p-3 sm:p-4 border border-gray-200 shadow-sm hover:shadow-lg transition-all group cursor-pointer" onclick="openLightbox('43.jpg', 'คณะกรรมการดำเนินงานระบบดูแลช่วยเหลือนักเรียน ได้รับรางวัลระดับยอดเยี่ยม')">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-3 sm:mb-4">
+                        <img src="43.jpg" alt="เกียรติบัตร 5" class="img-cover">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="bg-white p-3 rounded-full text-primary shadow-lg transform scale-90 group-hover:scale-100 transition-transform"><i class="fa-solid fa-search"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 font-medium text-center line-clamp-2 px-1">คณะกรรมการดำเนินงานระบบดูแลช่วยเหลือนักเรียน (รางวัลยอดเยี่ยมระดับประเทศ)</p>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="bg-white rounded-xl p-3 sm:p-4 border border-gray-200 shadow-sm hover:shadow-lg transition-all group cursor-pointer" onclick="openLightbox('49.png', 'นำเสนอนวัตกรรม โครงการวันวิชาการคณะพลศึกษา มศว.')">
+                    <div class="aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden relative mb-3 sm:mb-4">
+                        <img src="49.png" alt="เกียรติบัตร 6" class="img-cover">
+                        <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <div class="bg-white p-3 rounded-full text-primary shadow-lg transform scale-90 group-hover:scale-100 transition-transform"><i class="fa-solid fa-search"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-700 font-medium text-center line-clamp-2 px-1">เกียรติบัตรการนำเสนอนวัตกรรมสุขภาพและกีฬา มหาวิทยาลัยศรีนครินทรวิโรฒ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-6 sm:py-8 border-t border-slate-800 text-center">
+        <p class="text-xs sm:text-sm px-4">
+            &copy; 2026 Thidarat Jaidee. All Rights Reserved. <br class="sm:hidden">
+            <span class="hidden sm:inline"> | </span> Teacher Portfolio | เทคโนโลยีดิจิทัลเพื่อการศึกษา
+        </p>
+    </footer>
+
+    <!-- Lightbox Modal (Fully responsive & swipeable) -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-slate-950/95 hidden flex-col items-center justify-center opacity-0 transition-opacity duration-300 backdrop-blur-sm touch-none">
+        
+        <!-- Controls -->
+        <button id="lightbox-close" class="absolute top-3 right-3 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 hover:bg-white/20 rounded-full text-white flex items-center justify-center text-xl sm:text-2xl transition-colors z-20"><i class="fa-solid fa-xmark"></i></button>
+        <div id="lightbox-counter" class="absolute top-4 left-4 sm:top-6 sm:left-6 text-white bg-black/50 px-3 py-1 sm:px-4 sm:py-1.5 rounded-full hidden z-20 text-xs sm:text-sm font-medium">1 / 1</div>
+        
+        <!-- Navigation Buttons (Hidden on very small screens to encourage swipe, but visible on tablets/desktops) -->
+        <button id="lightbox-prev" class="absolute left-1 sm:left-4 md:left-8 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-black/50 hover:bg-primary rounded-full text-white flex items-center justify-center text-lg sm:text-xl hidden z-20"><i class="fa-solid fa-chevron-left"></i></button>
+        <button id="lightbox-next" class="absolute right-1 sm:right-4 md:right-8 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 bg-black/50 hover:bg-primary rounded-full text-white flex items-center justify-center text-lg sm:text-xl hidden z-20"><i class="fa-solid fa-chevron-right"></i></button>
+        
+        <!-- Image Container -->
+        <div class="relative w-full h-full flex justify-center items-center px-4 sm:px-16 md:px-24">
+            <img id="lightbox-img" src="" alt="Enlarged view" class="max-w-full max-h-[70vh] sm:max-h-[85vh] object-contain rounded-md shadow-2xl scale-95 transition-transform duration-300 select-none">
+        </div>
+        
+        <!-- Caption -->
+        <div class="absolute bottom-6 sm:bottom-8 w-full px-4 sm:px-12 text-center z-20 pointer-events-none">
+            <p id="lightbox-caption" class="text-white text-sm sm:text-base md:text-lg font-medium inline-block bg-black/60 px-4 py-2 rounded-lg pointer-events-auto backdrop-blur-md max-w-2xl"></p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Data Arrays for Internship Galleries (5-6 images each)
+        const internship1Images = [
+            {url: '7.png', caption: 'สังเกตการสอน - การจัดบรรยากาศในชั้นเรียน'},
+            {url: '8.png', caption: 'สังเกตการสอน - พฤติกรรมผู้เรียนระหว่างทำกิจกรรม'},
+            {url: '10.png', caption: 'สังเกตการสอน - เทคนิคการสอนของครูพี่เลี้ยง'},
+            {url: '9.png', caption: 'รู้จักการปฏิบัติหน้าที่ครุนอกเหนือจากการสอน เช่น การคุมนักเรียนที่มาสาย'},
+            {url: '11.png', caption: 'ปฏิบัติหน้าที่ครูเวรประจำวัน'}
+        ];
+
+        const internship2Images = [
+            {url: '18.jpg', caption: 'เตรียมสื่อการสอนวิทยาการคำนวณ ป.4-ป.6 ให้ครู'},
+            {url: '17.jpg', caption: 'ผู้ช่วยครู - ดูแลนักเรียนระหว่างปฏิบัติกิจกรรมกลุ่ม'},
+            {url: '16.jpg', caption: 'กิจกรรมหน้าเสาธง'},
+            {url: '13.jpg', caption: 'ผู้ช่วยครู - กิจกรรมลูกเสือ-เนตรนารี (ฐานกิจกรรม)'},
+            {url: '14.jpg', caption: 'เวรประจำวันรับนักเรียนหน้าโรงเรียนตอนเช้า'},
+            {url: '15.jpg', caption: 'ผู้ช่วยครู - มีส่วนร่วมในกิจกรรมทั่วไปของโรงเรียน'}
+        ];
+
+        const internship3Images = [
+            {url: '38.jpg', caption: 'สอน ม.1 วิชาวิทยาการคำนวณ'},
+            {url: '40.jpg', caption: 'ช่วยทำอินโทร โลโก้ทีม ROV โรงเรียน'},
+            {url: '41.jpg', caption: 'สัปดาห์วิทยาศาสตร์ ให้นักเรียนลองบังคับหุ่นยนต์เล่น'},
+            {url: '42.jpg', caption: 'สัปดาห์วิทยาศาสตร์'}
+        ];
+
+        const internship4Images = [
+            {url: '19.jpg', caption: 'ฝึกประสบการณ์ - ปฏิบัติหน้าที่ครูผู้สอนเต็มเวลา'},
+            {url: '20.jpg', caption: 'ฝึกประสบการณ์ - สอนวิชาวิทยาการคำนวณ ม.1'},
+            {url: '21.png', caption: 'ฝึกประสบการณ์ - สอนวิชาชุมนุม สร้างเว็บ HTML/CSS'},
+            {url: '22.jpg', caption: 'กิจกรรมกีฬาสีโรงเรียน'},
+            {url: '23.jpg', caption: 'เดินสวนสนาม ลูกเสือ-เนตรนารี'},
+            {url: '37.jpg', caption: 'กิจกรรมสัปดาห์วิทยาศาสตร์'}
+        ];
+
+        // Data Arrays for Portfolio Galleries
+        const innovationImages = [
+            {url: '4.jpg', caption: 'นำเสนอนวัตกรรม ณ คณะพลศึกษา มศว.'},
+            {url: '3.jpg', caption: 'โครงสร้างอุปกรณ์ฝึกซ้อมเทเบิลเทนนิส'},
+            {url: '6.jpg', caption: 'บอร์ดควบคุมและเซนเซอร์การนับลูกอัตโนมัติ'},
+            {url: '5.jpg', caption: 'การทดสอบระบบเรียลไทม์'}
+        ];
+
+        const robotics1Images = [
+            {url: '24.jpg', caption: 'อบรมวิทยาการคอมพิวเตอร์ ครั้งที่ 1 (บรรยาย)'},
+            {url: '27.jpg', caption: 'ให้คำปรึกษาการเขียนโปรแกรมอย่างใกล้ชิด'},
+            {url: '25.jpg', caption: 'ให้คำปรึกษาการเขียนโปรแกรมอย่างใกล้ชิด'},
+            {url: '26.jpg', caption: 'การทดสอบหุ่นยนต์อัตโนมัติ'}
+        ];
+        
+        const microbitImages = [
+            {url: '28.jpg', caption: 'แข่งขันหุ่นยนต์วิ่งตามเส้น Microbit'},
+            {url: '30.jpg', caption: 'เป็นวิทยากร'},
+            {url: '29.jpg', caption: 'นักเรียนทดสอบหุ่นยนต์ในสนามจริง'},
+            {url: '31.jpg', caption: 'ให้คำปรึกษานักเรียนนักเขียนโค้ด'}
+        ];
+        const robotics2Images = [
+            {url: '32.jpg', caption: 'ค่ายหุ่นยนต์เตะจุดโทษ'},
+            {url: '33.jpg', caption: 'การทำงานเป็นทีมของนักเรียน'},
+            {url: '34.jpg', caption: 'ลองประกอบหุ่นยนต์แตะจุดโทษ'},
+            {url: '36.JPG', caption: 'ทดสอบการยิงจุดโทษของหุ่นยนต์ในสนาม'}
+        ];
+        const webDevImages = [
+            {url: '44.png', caption: 'หน้าหลักระบบเว็บไซต์ประกาศผลและเกียรติบัตร'},
+            {url: '45.png', caption: 'ระบบค้นหาชื่อนักเรียนเพื่อรับเกียรติบัตร'},
+            {url: '46.png', caption: 'รูปแบบ E-Certificate ที่ระบบสร้างอัตโนมัติ'}
+        ];
+         const pm25Images = [
+            {url: '54.jpg', caption: 'ประกอบวงจรไมโครคอนโทรลเลอร์และเซนเซอร์ฝุ่น'},
+            {url: '53.jpg', caption: 'การเขียนโปรแกรมเชื่อมต่อ WiFi และส่งข้อมูลเข้า Cloud'},
+            {url: '2.png', caption: 'การส่งข้อมูลรายงานผล'},
+            {url: '3.png', caption: 'โค้ดดิ้งเชื่อมต่อข้อมูล'},
+            {url: '4.png', caption: 'หน้าจอแสดงผล Dashboard ค่าฝุ่นแบบเรียลไทม์'},
+            {url: '55.jpg', caption: 'ติดตั้งเครื่องวัดฝุ่นจริงในห้องเรียนและทดสอบการใช้งาน'} ,
+            {url:'56.jpg', caption: 'ติดตั้งเครื่องวัดฝุ่นจริงในห้องเรียนและทดสอบการใช้งาน'}
+        ];
+        const teachingImages = [
+            {url: '35.jpg', caption: 'บรรยากาศการเรียนวิทยาการคำนวณ'},
+            {url: '19.png', caption: 'นักเรียนใช้งานเว็บไซต์ Codekit'},
+            {url: '21.png', caption: 'การอธิบายโครงสร้างโปรแกรมแบบ Text '}
+        ];
+
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-xmark');
+            });
+
+            // Close menu when clicking a link
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-xmark');
+                });
+            });
+        });
+
+        // Lightbox Logic & Touch Swipe Setup
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        const lightboxCounter = document.getElementById('lightbox-counter');
+
+        let currentGallery = [];
+        let currentIndex = 0;
+        
+        // Touch variables
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        window.openLightbox = function(imgSrc, caption = '') {
+            window.openGallery([{url: imgSrc, caption: caption}]);
+        }
+
+        window.openGallery = function(images, startIndex = 0) {
+            if (!images || images.length === 0) return;
+            currentGallery = images;
+            currentIndex = startIndex;
+            updateLightboxContent();
+            
+            if (currentGallery.length > 1) {
+                lightboxPrev.classList.remove('hidden');
+                lightboxNext.classList.remove('hidden');
+                lightboxCounter.classList.remove('hidden');
+            } else {
+                lightboxPrev.classList.add('hidden');
+                lightboxNext.classList.add('hidden');
+                lightboxCounter.classList.add('hidden');
+            }
+            
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex'); // Ensure flex is applied when unhidden
+            // Trigger reflow
+            void lightbox.offsetWidth;
+            lightbox.classList.remove('opacity-0');
+            lightboxImg.classList.remove('scale-95');
+            lightboxImg.classList.add('scale-100');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function updateLightboxContent() {
+            lightboxImg.src = currentGallery[currentIndex].url;
+            if(currentGallery[currentIndex].caption) {
+                lightboxCaption.textContent = currentGallery[currentIndex].caption;
+                lightboxCaption.parentElement.classList.remove('hidden');
+            } else {
+                lightboxCaption.textContent = '';
+                lightboxCaption.parentElement.classList.add('hidden');
+            }
+            lightboxCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
+        }
+
+        function prevImage(e) {
+            if(e) e.stopPropagation();
+            if (currentGallery.length > 1) {
+                currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+                updateLightboxContent();
+            }
+        }
+
+        function nextImage(e) {
+            if(e) e.stopPropagation();
+            if (currentGallery.length > 1) {
+                currentIndex = (currentIndex + 1) % currentGallery.length;
+                updateLightboxContent();
+            }
+        }
+
+        function closeLightboxFunc(e) {
+            if(e) e.stopPropagation();
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.remove('scale-100');
+            lightboxImg.classList.add('scale-95');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+                document.body.style.overflow = '';
+                currentGallery = [];
+            }, 300);
+        }
+
+        // Event Listeners for Clicks
+        lightboxClose.addEventListener('click', closeLightboxFunc);
+        lightboxPrev.addEventListener('click', prevImage);
+        lightboxNext.addEventListener('click', nextImage);
+        
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.closest('.flex.justify-center.items-center') === e.target) {
+                closeLightboxFunc();
+            }
+        });
+        
+        // Keyboard Support
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('hidden')) {
+                if (e.key === 'Escape') closeLightboxFunc();
+                if (e.key === 'ArrowLeft') prevImage();
+                if (e.key === 'ArrowRight') nextImage();
+            }
+        });
+
+        // Swipe Support for Mobile
+        lightbox.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        lightbox.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+
+        function handleSwipe() {
+            // Need a minimum distance (e.g. 50px) to count as a swipe
+            const threshold = 50;
+            if (touchendX < touchstartX - threshold) {
+                // Swiped left (show next image)
+                nextImage();
+            }
+            if (touchendX > touchstartX + threshold) {
+                // Swiped right (show previous image)
+                prevImage();
+            }
+        }
+    </script>
+</body>
+</html>
